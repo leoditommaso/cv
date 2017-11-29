@@ -1,0 +1,70 @@
+% Variables principales.
+\def  \NombreCompleto   {Leandro Damián}
+\def  \Apellidos        {Di Tommaso}
+\def  \Direccion        {Ruta 215 Km. 28,500}
+\def  \Localidad        {La Plata (1901) - Buenos Aires}
+\def  \Correo           {leandro.ditommaso@mikroways.net}
+\def  \SitioWeb         {http://www.mikroways.net}
+
+% Encabezado de la práctica.
+\newcommand{\Encabezado}{
+                        \begin{adjustwidth}{-40mm}{}
+                        \begin{flushleft}
+                          \vspace*{-7mm}
+                          \hspace{3mm}\LARGE\textbf{\color{white}\NombreCompleto}
+                          \LARGE\textbf{\color{bletras}\Apellidos}\\
+                        \end{flushleft}
+                        \end{adjustwidth}
+                        \begin{adjustwidth}{-60mm}{137mm}
+                          \begin{flushright}
+                          \vspace{6mm}
+                          \small\color{white}
+                          \textbf{\Direccion}\\
+                          \vspace{-0.5mm}
+                          \textbf{\Localidad}\\
+                          \vspace{-0.5mm}
+                          \textbf{\Correo}\\
+                          \vspace{-0.5mm}
+                          \textbf{\SitioWeb}\\
+                          \vspace{-16mm}
+                          \end{flushright}
+                        \end{adjustwidth}
+                        }
+
+% Títulos.
+\newcommand{\Seccion}[1]{
+  \vspace{1em}\uppercase{\section*{{#1}}}{\titlerule[0.8pt]}\vspace{0.6em}
+}
+
+\titleformat{\section}{\fontsize{10}{10}\bfseries}{\thesection}{0em}{}
+
+\titlespacing{\section}{0em}{0em}{0em}
+
+\newcommand{\Posicion}[3]{
+  \vspace{-0.8em}
+  \subsection*{
+    \color{white}\tabto{-4.5cm}\uppercase{\textit{#1}}\color{bletras}\tabto{0cm}
+    \uppercase{#2}\ifthenelse{\equal{#3}{}}{.}{; {#3}.}
+  }
+  \vspace{-0.2em}
+}
+
+\titleformat{\subsection}
+  {\fontsize{9}{10}\bfseries}
+  {
+    \begin{adjustwidth}{-60mm}{}
+      \begin{flushleft}
+        \thesubsection
+      \end{flushleft}
+    \end{adjustwidth}
+  }
+{1em}{}
+
+\titlespacing{\subsection}{0em}{0em}{0em}
+
+
+\newcommand{\Idioma}[1]{
+  \vspace{0.5em}\uppercase{\subsubsection*{#1}}\vspace{-0.5em}
+}
+
+\titlespacing{\subsubsection}{0em}{0em}{0em}

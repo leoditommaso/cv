@@ -1,0 +1,32 @@
+\geometry{
+    paper=a4paper,
+    left=6cm,
+    right=2cm,
+    top=2cm,
+    bottom=2.5cm,
+}
+
+\AddToShipoutPictureBG{
+  \put(0,0){\includegraphics{inc/background.pdf}}%
+}
+
+\setmainfont{Source Sans Pro}
+\spacing{1.1}                     % Interlineado por defecto.
+\setlength{\parindent}{0em}   % Quitar la sangría al inicio de cada nuevo párrafo.
+\setlength{\parskip}{0.6em}
+
+% Support for fancy styles
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+% Pie de página.
+\fancyfoot[R]{
+  \fontsize{7}{11}\selectfont
+  \vspace{3mm}
+  \NombreCompleto\ \Apellidos. Año \the\year. Pág. \thepage. \\
+}
+
+\setlist[enumerate,2]{leftmargin=1.2cm,label=\alph*.,ref=\alph*}
+\setlist[enumerate,3]{label=\roman*.,ref=\roman*}
+\setlist[itemize,1]{leftmargin=1.2cm}
